@@ -32,3 +32,5 @@ route::post('/sesi/login', [SessionController::class, 'login'])->middleware('isT
 route::get('/logout',[SessionController::class, 'logout']);
 route::get('/register',[SessionController::class, 'register'])->middleware('isTamu');
 route::post('/sesi/create',[SessionController::class, 'create'])->middleware('isTamu');
+
+Route::get('/cetak',[data_asal_sekolahController::class, 'cetak']);
