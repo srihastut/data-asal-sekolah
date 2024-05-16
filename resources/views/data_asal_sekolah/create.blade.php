@@ -11,6 +11,15 @@
             <label for="nama_asal_sekolah" class="form-label">Nama Asal Sekolah</label>
             <input type="text" class="form-control" name="nama_asal_sekolah" id="nama_asal_sekolah" value="{{ old('nama_asal_sekolah') }}">
         </div>
+        <div class="form-group">
+            <label for="jenis_asal_sekolah" class="form-label">Jenis Asal Sekolah</label>
+            <select class="form-control select2" style="width: 100%;" name="jenis_asal_sekolah" id="jenis_asal_sekolah">
+                <option disabled selected>Pilih Jenis asal sekolah</option>
+                @foreach ($jenis as $item)
+                    <option value="{{ $item->id }}">{{ $item->jenis }}</option>
+                @endforeach
+            </select>
+        </div>            
         <div class="mb-3">
             <label for="deskripsi" class="form-label">Deskripsi</label>
             <input type="text" class="form-control" name="deskripsi" id="deskripsi" value="{{ old('deskripsi') }}">
