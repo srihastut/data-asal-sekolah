@@ -10,6 +10,10 @@
         <p>
             <b>Nama Asal Sekolah</b> {{$data->nama_asal_sekolah}}
         </p>
+        <!-- Perbaikan: Ubah $jenis->jenis_asal_sekolah menjadi $jenis->jenis -->
+        <p>
+            <b>Jenis Asal Sekolah</b> {{$jenis->jenis}}
+        </p>
         <p>
             <b>Deskripsi</b> {{$data->deskripsi}}
         </p>
