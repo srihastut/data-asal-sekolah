@@ -15,6 +15,7 @@ return new class extends Migration
             $table->timestamps();
             $table->integer('kode_asal_sekolah');
             $table->string('nama_asal_sekolah');
+            $table->biginteger('jenis_asal_sekolah');
             $table->string('deskripsi');
             $table->string('kota_asal_sekolah');
             $table->string('provinsi_asal_sekolah');
