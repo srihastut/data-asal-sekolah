@@ -9,11 +9,14 @@
     </form>
   </div>
     <a href="/data_asal_sekolah/create" class="btn btn-primary mb-2">+ Tambah Data Asal Sekolah</a>
+    <a href="{{url('/cetak')}}" target="_blank" class="btn btn-primary mb-2">Cetak Data <i class="fa-light fa-print"></i>
+</a>
     <table class="table">
         <thead>
             <tr>
                 <th>Kode Asal Sekolah</th>
                 <th>Nama Asal Sekolah</th>
+                <th>Jenis Asal Sekolah</th>
                 <th>Deskripsi</th>
                 <th>Kota Asal Sekolah</th>
                 <th>Provinsi Asal Sekolah</th>
@@ -25,6 +28,7 @@
                 <tr>
                     <td>{{ $item->kode_asal_sekolah }}</td>
                     <td>{{ $item->nama_asal_sekolah }}</td>
+                    <td>{{ $item->jenis->jenis }}</td>
                     <td>{{ $item->deskripsi }}</td>
                     <td>{{ $item->kota_asal_sekolah }}</td>
                     <td>{{ $item->provinsi_asal_sekolah }}</td>
