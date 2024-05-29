@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta chatset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{csrf_token()}}">
@@ -33,6 +33,7 @@
         
         <table class="static" align="center" rules="all" border="1px" style="width: 95%;">
             <tr>
+                <th>No</th>
                 <th>Kode Asal Sekolah</th>
                 <th>Nama Asal Sekolah</th>
                 <th>Jenis Asal Sekolah</th>
@@ -40,8 +41,10 @@
                 <th>Kota Asal Sekolah</th>
                 <th>Provinsi Asal Sekolah</th>
             </tr>
+            @php $counter = 1; @endphp
             @foreach ($data_asal_sekolah as $item)
             <tr>
+                <td>{{ $counter++ }}</td>
                 <td>{{ $item->kode_asal_sekolah }}</td>
                 <td>{{ $item->nama_asal_sekolah }}</td>
                 <td>{{ $item->jenis->jenis }}</td>
